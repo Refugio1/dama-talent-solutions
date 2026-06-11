@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de Talento | DAMA Talent Solutions</title>
+    <meta name="description" content="Executive Search & Headhunting, Reclutamiento Técnico Especializado para Energía, Aeroespacial, Oil & Gas, Automotriz y Manufactura en México.">
+    <!-- Prevent favicon 404 error -->
+    <link rel="icon" href="data:;base64,iVBORw0kGgo=">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: {
+                                900: '#0E2A47',
+                                700: '#1F5AA6',
+                                500: '#2C7BE5',
+                                100: '#E7F0FF',
+                            },
+                            neutral: {
+                                white: '#FFFFFF',
+                                50: '#F7F9FC',
+                                100: '#F1F5F9',
+                                300: '#CBD5E1',
+                                600: '#64748B',
+                                900: '#0F172A',
+                            },
+                            success: '#10B981',
+                            warning: '#F59E0B',
+                            error: '#EF4444',
+                            teal: '#1BB3A4',
+                            black: '#0F172A',
+                            dark: '#0E2A47',
+                            gray: '#64748B',
+                            light: '#F7F9FC',
+                            white: '#FFFFFF',
+                            accent: '#2C7BE5',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome CDN Dual Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #F7F9FC; /* Gris 50 */
+            color: #0F172A; /* Gris 900 */
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom Typography Scale & Line Heights */
+        .text-h1 {
+            font-size: 48px;
+            line-height: 56px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+        .text-h2 {
+            font-size: 36px;
+            line-height: 40px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+        .text-h3 {
+            font-size: 28px;
+            line-height: 32px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+        .text-body {
+            font-size: 16px;
+            line-height: 1.68;
+            font-family: 'Inter', sans-serif;
+        }
+        .text-meta {
+            font-size: 14px;
+            line-height: 1.5;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .section-padding { padding: 8rem 0; }
+        
+        /* Hero Masking */
+        .hero-img-container {
+            position: relative;
+            height: 60vh;
+            border-radius: 2rem;
+            overflow: hidden;
+            transform: scale(0.98);
+            transition: transform 1s ease-out;
+        }
+        .hero-img-container.loaded {
+            transform: scale(1);
+        }
+        .hero-bg {
+            background-image: url('assets/img/aerospace_control.png');
+            background-position: center;
+            background-size: cover;
+            filter: grayscale(10%) contrast(110%);
+        }
+
+        /* Nyssa Minimalist Forms */
+        .minimal-input {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .minimal-input input, .minimal-input textarea {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(15, 23, 42, 0.2); /* Gris 900 */
+            padding: 1rem 0;
+            font-size: 1rem;
+            color: #0F172A; /* Gris 900 */
+            transition: all 0.3s ease;
+            outline: none;
+            font-weight: 400;
+        }
+        .dark-section .minimal-input input, 
+        .dark-section .minimal-input textarea {
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            color: #FFFFFF;
+        }
+        .minimal-input input:focus, .minimal-input textarea:focus {
+            border-bottom-color: #2C7BE5; /* Azul 500 */
+        }
+        .minimal-input label {
+            position: absolute;
+            left: 0;
+            top: 1rem;
+            color: #64748B; /* Gris 600 */
+            transition: all 0.3s ease;
+            pointer-events: none;
+            font-size: 1rem;
+        }
+        .dark-section .minimal-input label {
+            color: rgba(255,255,255,0.5);
+        }
+        .minimal-input input:focus ~ label,
+        .minimal-input input:not(:placeholder-shown) ~ label,
+        .minimal-input textarea:focus ~ label,
+        .minimal-input textarea:not(:placeholder-shown) ~ label {
+            top: -10px;
+            font-size: 0.75rem;
+            color: #2C7BE5; /* Azul 500 */
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        /* Buttons */
+        .btn-minimal {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            border-radius: 100px;
+            font-weight: 600;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.85rem;
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-dark {
+            background-color: #0E2A47; /* Azul 900 */
+            color: #FFFFFF;
+        }
+        .btn-dark:hover {
+            background-color: #1F5AA6; /* Azul 700 */
+            color: #FFFFFF;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(14, 42, 71, 0.2);
+        }
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid #CBD5E1; /* Gris 300 */
+            color: #0E2A47; /* Azul 900 */
+        }
+        .btn-outline:hover {
+            border-color: #0E2A47;
+            background-color: #0E2A47;
+            color: #FFFFFF;
+        }
+        .btn-white {
+            background-color: #FFFFFF;
+            color: #0E2A47; /* Azul 900 */
+        }
+        .btn-white:hover {
+            background-color: #E7F0FF; /* Azul 100 */
+            color: #0E2A47;
+        }
+
+        /* Bento Grid Borders - Very Clean */
+        .clean-bento {
+            border: 1px solid #CBD5E1; /* Gris 300 */
+            background: #FFFFFF;
+            transition: all 0.4s ease;
+        }
+        .clean-bento:hover {
+            border-color: #94A3B8; /* Gris 400 */
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.05);
+            transform: translateY(-5px);
+        }
+
+        /* Custom Vector Micro-animations for SVGs */
+        .svg-icon {
+            overflow: visible;
+            width: 48px;
+            height: 48px;
+        }
+        .radar-line {
+            transform-origin: 24px 24px;
+            transition: transform 0.5s ease;
+        }
+        .group:hover .radar-line {
+            animation: spin 3s linear infinite;
+        }
+        .radar-dot {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .group:hover .radar-dot {
+            animation: pulse-dot 1.5s ease-in-out infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+
+        /* Timeline styles */
+        .timeline-step {
+            position: relative;
+            transition: all 0.4s ease;
+        }
+        .timeline-step:hover .timeline-number {
+            background-color: #1F5AA6;
+            color: white;
+            transform: scale(1.1);
+        }
+        .timeline-number {
+            transition: all 0.3s ease;
+        }
+
+        /* Accordion transition utility */
+        .faq-answer-wrapper {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .faq-item.active .faq-answer-wrapper {
+            grid-template-rows: 1fr;
+        }
+        .faq-answer {
+            overflow: hidden;
+        }
+        .faq-chevron {
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .faq-chevron {
+            transform: rotate(180deg);
+        }
+
+        /* ===== Micro-animated SVG Icons — Garantía Section ===== */
+        .svg-icon-md {
+            overflow: visible;
+            width: 40px;
+            height: 40px;
+        }
+
+        /* 1. Escudo (Protección de inversión) */
+        .shield-body {
+            stroke: currentColor;
+            transition: all 0.4s ease;
+            transform-origin: center;
+        }
+        .shield-check-draw {
+            stroke: currentColor;
+            stroke-dasharray: 18;
+            stroke-dashoffset: 18;
+            transition: stroke-dashoffset 0.5s ease 0.1s;
+        }
+        .shield-glow {
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            transform-origin: center;
+        }
+        .group:hover .shield-body {
+            animation: shield-pulse 1.5s ease-in-out infinite;
+            stroke: #F59E0B;
+        }
+        .group:hover .shield-check-draw {
+            stroke-dashoffset: 0;
+            stroke: #F59E0B;
+        }
+        .group:hover .shield-glow {
+            opacity: 0.2;
+            animation: shield-glow-anim 1.5s ease-in-out infinite;
+        }
+        @keyframes shield-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        @keyframes shield-glow-anim {
+            0%, 100% { transform: scale(1); opacity: 0.15; }
+            50% { transform: scale(1.3); opacity: 0.3; }
+        }
+
+        /* 2. Target (Esquemas personalizados) */
+        .g-target-ring {
+            stroke: currentColor;
+            transform-origin: 14px 14px;
+            transition: all 0.3s ease;
+        }
+        .g-target-dot {
+            fill: currentColor;
+            transform-origin: 14px 14px;
+            transition: all 0.3s ease;
+        }
+        .group:hover .g-target-ring-outer {
+            animation: g-ring-pulse 1.5s ease-out infinite;
+        }
+        .group:hover .g-target-ring-mid {
+            animation: g-ring-pulse 1.5s ease-out infinite 0.25s;
+        }
+        .group:hover .g-target-dot {
+            animation: g-dot-bounce 0.6s ease-out;
+            fill: #F59E0B;
+        }
+        @keyframes g-ring-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.5; }
+        }
+        @keyframes g-dot-bounce {
+            0% { transform: scale(0.5); }
+            60% { transform: scale(1.6); }
+            100% { transform: scale(1); }
+        }
+
+        /* 3. Handshake (Seguimiento post-colocación) */
+        .g-handshake-body {
+            stroke: currentColor;
+            transition: all 0.4s ease;
+            transform-origin: center;
+        }
+        .group:hover .g-handshake-body {
+            animation: g-handshake-motion 0.8s ease-in-out infinite;
+            stroke: #F59E0B;
+        }
+        @keyframes g-handshake-motion {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg) translateY(-1px); }
+            75% { transform: rotate(-5deg) translateY(1px); }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-brand-accent selection:text-white">
+
+<!-- Navbar -->
+<nav class="fixed w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-xl border-b border-black/5 h-24" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+        <div class="flex justify-between items-center h-full transition-all duration-300">
+            <div class="flex-shrink-0 flex items-center gap-2">
+                <a href="index-split.html" class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-brand-black text-white flex items-center justify-center rounded-sm">
+                        <i class="fa-solid fa-layer-group text-sm"></i>
+                    </div>
+                    <span class="font-heading font-bold text-2xl tracking-tighter">DAMA<span class="text-brand-accent">.</span></span>
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-10">
+                <a href="index-split.html" class="text-brand-gray hover:text-brand-black transition-colors text-sm font-semibold uppercase tracking-widest">Home</a>
+                <a href="index-split.html#soluciones" class="text-brand-gray hover:text-brand-black transition-colors text-sm font-semibold uppercase tracking-widest">Nosotros</a>
+                <a href="#" class="text-brand-black border-b-2 border-brand-accent transition-colors text-sm font-semibold uppercase tracking-widest pb-1">Servicios</a>
+                <a href="#contacto" class="text-brand-gray hover:text-brand-black transition-colors text-sm font-semibold uppercase tracking-widest">Contacto</a>
+            </div>
+            <div class="hidden md:flex">
+                <a href="#contacto" class="btn-minimal btn-dark">
+                    Hablemos <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section — Mosaic Layout -->
+<header class="relative overflow-hidden" style="padding-top: 96px; background-color: #0e2a47;">
+
+    <style>
+        /* Hero mosaic animations */
+        .mosaic-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .mosaic-card:hover .mosaic-img {
+            transform: scale(1.05);
+        }
+        .mosaic-label {
+            position: absolute;
+            bottom: 14px;
+            left: 14px;
+            background: rgba(255,255,255,0.92);
+            backdrop-filter: blur(8px);
+            color: #0F172A;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding: 6px 14px;
+            border-radius: 100px;
+            white-space: nowrap;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+        .mosaic-card {
+            overflow: hidden;
+            position: relative;
+            border-radius: 1.5rem;
+        }
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .hero-mosaic-top { animation: float-slow 7s ease-in-out infinite; }
+        .hero-mosaic-bottom { animation: float-slow 7s ease-in-out infinite 3.5s; }
+    </style>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-center gap-12 py-16 lg:py-20">
+
+            <!-- Columna izquierda: Texto -->
+            <div class="flex-1 max-w-xl" data-aos="fade-right">
+                <span class="text-brand-accent font-bold tracking-widest text-xs uppercase mb-5 block">Nuestros Servicios</span>
+                <h1 class="font-heading font-bold text-white leading-tight mb-6"
+                    style="font-size: clamp(2.4rem, 4vw, 3.5rem); line-height: 1.1; letter-spacing: -0.02em;">
+                    Soluciones de talento para industrias de alta exigencia.
+                </h1>
+                <p class="text-base md:text-lg text-gray-300 font-light leading-relaxed mb-6">
+                    En DAMA Talent Solutions acompañamos a empresas industriales en la búsqueda de talento clave para posiciones críticas en energía, oil &amp; gas, construcción e infraestructura, automotriz, manufactura avanzada, industria pesada, minería y aeroespacial.
+                </p>
+                <p class="text-sm text-gray-400 font-light leading-relaxed">
+                    Lo hacemos mediante procesos especializados, confidenciales y orientados a encontrar perfiles con el nivel técnico, estratégico y cultural que cada organización necesita para fortalecer su operación y crecimiento.
+                </p>
+            </div>
+
+            <!-- Columna derecha: Mosaico de imágenes 2×2 asimétrico -->
+            <div class="flex-1 w-full max-w-2xl" data-aos="fade-left" data-aos-delay="150">
+                <div class="grid grid-cols-2 gap-4" style="height: 520px;">
+
+                    <!-- Columna izq del mosaico -->
+                    <div class="flex flex-col gap-4 hero-mosaic-top">
+                        <!-- Imagen grande arriba izq -->
+                        <div class="mosaic-card flex-[1.6]">
+                            <img src="assets/img/hero_mosaic_1.png" alt="Ingeniero de Oil & Gas" class="mosaic-img" />
+                            <span class="mosaic-label">Oil &amp; Gas · Energía</span>
+                        </div>
+                        <!-- Imagen pequeña abajo izq -->
+                        <div class="mosaic-card flex-1">
+                            <img src="assets/img/hero_mosaic_3.png" alt="Executive Search" class="mosaic-img" />
+                            <span class="mosaic-label">Executive Search</span>
+                        </div>
+                    </div>
+
+                    <!-- Columna der del mosaico -->
+                    <div class="flex flex-col gap-4 hero-mosaic-bottom">
+                        <!-- Imagen pequeña arriba der -->
+                        <div class="mosaic-card flex-1">
+                            <img src="assets/img/hero_mosaic_2.png" alt="Ingeniería Aeroespacial" class="mosaic-img" />
+                            <span class="mosaic-label">Aeroespacial</span>
+                        </div>
+                        <!-- Imagen grande abajo der -->
+                        <div class="mosaic-card flex-[1.6]">
+                            <img src="assets/img/hero_mosaic_4.png" alt="Manufactura Automotriz" class="mosaic-img" />
+                            <span class="mosaic-label">Automotriz · Manufactura</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Barra CTA inferior (full width) -->
+    <div class="bg-brand-blue-900" data-aos="fade-up" data-aos-delay="200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 py-5">
+                <div class="flex items-center gap-3">
+                    <span class="w-2 h-2 rounded-full bg-brand-accent flex-shrink-0" style="box-shadow: 0 0 0 4px rgba(44,123,229,0.25);"></span>
+                    <p class="text-white font-medium text-sm md:text-base">
+                        ¿Listo para encontrar el talento que tu operación necesita?
+                    </p>
+                </div>
+                <a href="#contacto" class="flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand-accent text-white font-heading font-semibold text-sm uppercase tracking-widest hover:bg-brand-blue-700 transition-all duration-300" style="letter-spacing: 0.06em;">
+                    Ver más <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<!-- Definición de Servicios Principales (Nyssa Version 2 Grid) -->
+
+<style>
+    /* ===== Orbital Services Diagram ===== */
+    .orbital-wrapper {
+        position: relative;
+        width: 340px;
+        height: 340px;
+        margin: 0 auto;
+    }
+    /* Outer orbit ring */
+    .orbital-ring {
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        border: 1.5px solid #CBD5E1;
+        animation: orbit-rotate 18s linear infinite;
+    }
+    @keyframes orbit-rotate {
+        from { transform: rotate(0deg); }
+        to   { transform: rotate(360deg); }
+    }
+    /* Central circle */
+    .orbital-center {
+        position: absolute;
+        inset: 50px;
+        border-radius: 50%;
+        background: #0E2A47;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1.5rem;
+        transition: all 0.4s ease;
+        box-shadow: 0 20px 50px rgba(14,42,71,0.3);
+        z-index: 2;
+    }
+    .orbital-center-title {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 700;
+        font-size: 0.8rem;
+        color: #FFFFFF;
+        line-height: 1.3;
+        margin-bottom: 0.5rem;
+        transition: all 0.3s ease;
+    }
+    .orbital-center-text {
+        font-size: 0.65rem;
+        color: rgba(255,255,255,0.65);
+        line-height: 1.5;
+        font-weight: 300;
+        transition: all 0.3s ease;
+    }
+    /* Icon nodes around the ring */
+    .orbital-node {
+        position: absolute;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: #0E2A47;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        cursor: pointer;
+        /* counter-rotate to keep icon upright */
+        transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 16px rgba(14,42,71,0.2);
+        z-index: 3;
+        /* placed via top/left + translate(-50%,-50%) at each angle */
+    }
+    .orbital-node:hover,
+    .orbital-node.active {
+        background: #2C7BE5;
+        transform: scale(1.15);
+        box-shadow: 0 8px 24px rgba(44,123,229,0.4);
+    }
+    /* Positions: top=12°, right=102°, bottom=192°, left=282°
+       Using top/left percentages + transform */
+    .orbital-node-0 { top: calc(50% - 170px * 0.978); left: calc(50% + 170px * 0.208); transform: translate(-50%,-50%); }
+    .orbital-node-1 { top: calc(50% + 170px * 0.208); left: calc(50% + 170px * 0.978); transform: translate(-50%,-50%); }
+    .orbital-node-2 { top: calc(50% + 170px * 0.978); left: calc(50% - 170px * 0.208); transform: translate(-50%,-50%); }
+    .orbital-node-3 { top: calc(50% - 170px * 0.208); left: calc(50% - 170px * 0.978); transform: translate(-50%,-50%); }
+
+    /* Animated entrance for feature lines */
+    .feature-line {
+        display: flex;
+        align-items: flex-start;
+        gap: 1.25rem;
+        opacity: 0;
+        transform: translateX(20px);
+        transition: all 0.5s ease;
+    }
+    .feature-line.visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .feature-line-icon {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2px;
+    }
+    
+    /* ===== SVG Icons Styles and Sizing ===== */
+    .svg-icon-md {
+        overflow: visible;
+        width: 40px;
+        height: 40px;
+        stroke: #2C7BE5; /* Azul 500 default */
+        fill: none;
+        transition: all 0.3s ease;
+    }
+
+    /* Search (Magnifying Glass) animation */
+    .search-lens {
+        transform-origin: 20px 20px;
+        transition: all 0.4s ease;
+        stroke: currentColor;
+    }
+    .search-handle {
+        transition: all 0.4s ease;
+        stroke: currentColor;
+    }
+    .group:hover .search-lens {
+        animation: search-pulse 1.2s ease-in-out infinite;
+    }
+    .group:hover .search-handle {
+        transform: scale(1.05);
+    }
+    @keyframes search-pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.15); }
+    }
+
+    /* Target (Bullseye) animation */
+    .target-ring {
+        stroke: currentColor;
+        transform-origin: 24px 24px;
+        transition: all 0.3s ease;
+    }
+    .target-dot {
+        fill: currentColor;
+        stroke: none;
+        transform-origin: 24px 24px;
+        transition: all 0.3s ease;
+    }
+    .group:hover .target-ring-outer {
+        animation: target-ring-pulse 1.5s ease-out infinite;
+    }
+    .group:hover .target-ring-mid {
+        animation: target-ring-pulse 1.5s ease-out infinite 0.2s;
+    }
+    .group:hover .target-dot {
+        animation: target-dot-bounce 0.6s ease-out;
+    }
+    @keyframes target-ring-pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.08); opacity: 0.6; }
+    }
+    @keyframes target-dot-bounce {
+        0% { transform: scale(0.5); }
+        60% { transform: scale(1.5); }
+        100% { transform: scale(1); }
+    }
+
+    /* Clipboard Check animation */
+    .clip-board {
+        stroke: currentColor;
+        transition: all 0.4s ease;
+    }
+    .clip-lines {
+        stroke: currentColor;
+        opacity: 0.3;
+        transition: opacity 0.4s ease;
+    }
+    .clip-check-draw {
+        stroke: currentColor;
+        stroke-dasharray: 22;
+        stroke-dashoffset: 22;
+        transition: stroke-dashoffset 0.5s ease 0.1s;
+    }
+    .group:hover .clip-lines {
+        opacity: 0.7;
+    }
+    .group:hover .clip-check-draw {
+        stroke-dashoffset: 0;
+    }
+
+    /* Handshake (Negociación) animation */
+    .hand-shake-body {
+        stroke: currentColor;
+        transition: all 0.4s ease;
+        transform-origin: center;
+    }
+    .group:hover .hand-shake-body {
+        animation: handshake-motion 0.8s ease-in-out infinite;
+    }
+    @keyframes handshake-motion {
+        0%, 100% { transform: rotate(0deg); }
+        25% { transform: rotate(4deg) translateY(-1px); }
+        75% { transform: rotate(-4deg) translateY(1px); }
+    }
+
+    /* Document (Filtrado riguroso) animation */
+    .doc-page {
+        transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+        stroke: currentColor;
+    }
+    .doc-check-mark {
+        stroke: currentColor;
+        stroke-dasharray: 22;
+        stroke-dashoffset: 22;
+        transition: stroke-dashoffset 0.5s ease 0.15s;
+    }
+    .group:hover .doc-page {
+        transform: translateY(-2px);
+    }
+    .group:hover .doc-check-mark {
+        stroke-dashoffset: 0;
+    }
+
+    /* Gear (Procesos ágiles) animation */
+    .tool-gear-body {
+        stroke: currentColor;
+        transform-origin: 24px 24px;
+        transition: all 0.4s ease;
+    }
+    .group:hover .tool-gear-body {
+        animation: spin-clockwise 3s linear infinite;
+    }
+    @keyframes spin-clockwise {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    /* Globe (Red sectorial) animation */
+    .globe-outer {
+        stroke: currentColor;
+        transform-origin: 24px 24px;
+        transition: all 0.4s ease;
+    }
+    .globe-detail {
+        stroke: currentColor;
+        opacity: 0.4;
+        transition: all 0.4s ease;
+    }
+    .group:hover .globe-outer {
+        animation: globe-wobble 2s ease-in-out infinite;
+    }
+    .group:hover .globe-detail {
+        opacity: 0.8;
+        animation: globe-detail-shift 2s ease-in-out infinite;
+    }
+    @keyframes globe-wobble {
+        0%, 100% { transform: rotate(0deg) scale(1); }
+        50% { transform: rotate(8deg) scale(1.05); }
+    }
+    @keyframes globe-detail-shift {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(2px); }
+    }
+
+    /* Briefcase (Soporte necesidades) animation */
+    .case-body-rect {
+        stroke: currentColor;
+        transition: all 0.4s ease;
+    }
+    .case-handle-arc {
+        stroke: currentColor;
+        transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .case-clasp {
+        stroke: currentColor;
+        transition: all 0.3s ease;
+    }
+    .group:hover .case-handle-arc {
+        animation: case-handle-bounce 0.8s ease-in-out infinite;
+    }
+    .group:hover .case-body-rect {
+        transform: translateY(-1px);
+    }
+    @keyframes case-handle-bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-3px); }
+    }
+</style>
+
+<!-- ── Servicio 1: Executive Search & Headhunting ── -->
+<section class="py-24 bg-white" id="executive-search">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+
+            <!-- Texto izquierda (5 columnas) -->
+            <div class="lg:col-span-5" data-aos="fade-right">
+                <span class="flex items-center gap-3 text-brand-accent font-bold tracking-widest text-xs uppercase mb-5">
+                    <span class="w-8 h-px bg-brand-accent inline-block"></span> Servicio 01
+                </span>
+                <h2 class="font-heading font-bold text-brand-black mb-5" style="font-size: clamp(1.9rem, 3vw, 2.8rem); line-height: 1.15; letter-spacing: -0.02em;">
+                    Executive Search &amp;<br>Headhunting
+                </h2>
+                <p class="text-brand-gray font-light text-base leading-relaxed mb-8">
+                    Para posiciones de alta dirección, dirección funcional, gerencias estratégicas y liderazgo crítico dentro de sectores técnicos e industriales.
+                </p>
+                <a href="#contacto" class="btn-minimal btn-dark">
+                    Iniciar búsqueda ejecutiva <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Bullets derecha con iconos animados y animación (7 columnas) -->
+            <div class="lg:col-span-7 space-y-6 services-features" data-delay="0" data-aos="fade-left" data-aos-delay="150">
+                
+                <!-- Bullet 1 -->
+                <div class="feature-line group p-6 rounded-2xl hover:bg-brand-neutral-50 border border-transparent hover:border-brand-neutral-100 transition-all duration-300">
+                    <div class="feature-line-icon">
+                        <svg class="svg-icon-md text-brand-accent group-hover:text-brand-blue-700 transition-colors duration-300" viewBox="0 0 48 48" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle class="search-lens" cx="20" cy="20" r="11" />
+                            <line class="search-handle" x1="28" y1="28" x2="40" y2="40" stroke-width="3" />
+                        </svg>
+                    </div>
+                    <div>
+                        <strong class="text-brand-black font-semibold text-base block mb-1">Búsqueda confidencial</strong>
+                        <span class="text-brand-gray text-sm font-light leading-relaxed">Accedemos a perfiles estratégicos que no participan activamente en portales de empleo tradicionales.</span>
+                    </div>
+                </div>
+
+                <!-- Bullet 2 -->
+                <div class="feature-line group p-6 rounded-2xl hover:bg-brand-neutral-50 border border-transparent hover:border-brand-neutral-100 transition-all duration-300">
+                    <div class="feature-line-icon">
+                        <svg class="svg-icon-md text-brand-accent group-hover:text-brand-blue-700 transition-colors duration-300" viewBox="0 0 48 48" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle class="target-ring target-ring-outer" cx="24" cy="24" r="18" />
+                            <circle class="target-ring target-ring-mid" cx="24" cy="24" r="10" />
+                            <circle class="target-dot" cx="24" cy="24" r="3" />
+                        </svg>
+                    </div>
+                    <div>
+                        <strong class="text-brand-black font-semibold text-base block mb-1">Mapeo de mercado</strong>
+                        <span class="text-brand-gray text-sm font-light leading-relaxed">Analizamos el ecosistema sectorial, localizando de forma precisa a los competidores y talento idóneo.</span>
+                    </div>
+                </div>
+
+                <!-- Bullet 3 -->
+                <div class="feature-line group p-6 rounded-2xl hover:bg-brand-neutral-50 border border-transparent hover:border-brand-neutral-100 transition-all duration-300">
+                    <div class="feature-line-icon">
+                        <svg class="svg-icon-md text-brand-accent group-hover:text-brand-blue-700 transition-colors duration-300" viewBox="0 0 48 48" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path class="clip-board" d="M16 8h16a4 4 0 0 1 4 4v24a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4V12a4 4 0 0 1 4-4z" />
+                            <path class="clip-lines" d="M18 18h12M18 26h12" />
+                            <path class="clip-check-draw" d="M18 34l4 4 8-8" />
+                        </svg>
+                    </div>
+                    <div>
+                        <strong class="text-brand-black font-semibold text-base block mb-1">Evaluación especializada</strong>
+                        <span class="text-brand-gray text-sm font-light leading-relaxed">Validamos a fondo la trayectoria, las competencias de liderazgo y el ajuste cultural del candidato.</span>
+                    </div>
+                </div>
+
+                <!-- Bullet 4 -->
+                <div class="feature-line group p-6 rounded-2xl hover:bg-brand-neutral-50 border border-transparent hover:border-brand-neutral-100 transition-all duration-300">
+                    <div class="feature-line-icon">
+                        <svg class="svg-icon-md text-brand-accent group-hover:text-brand-blue-700 transition-colors duration-300" viewBox="0 0 48 48" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path class="hand-shake-body" d="M10 24s4-8 14-8 14 8 14 8-4 8-14 8-14-8-14-8z" />
+                            <circle class="hand-shake-body" cx="24" cy="24" r="5" />
+                        </svg>
+                    </div>
+                    <div>
+                        <strong class="text-brand-black font-semibold text-base block mb-1">Acompañamiento en negociación</strong>
+                        <span class="text-brand-gray text-sm font-light leading-relaxed">Facilitamos una comunicación clara y transparente sobre expectativas de compensación y beneficios.</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Separador visual -->
+<div class="bg-brand-neutral-50 border-t border-brand-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-center gap-4">
+        <span class="w-12 h-px bg-brand-neutral-300"></span>
+        <span class="text-brand-neutral-300 font-heading font-bold text-xs uppercase tracking-widest">Nuestros Servicios</span>
+        <span class="w-12 h-px bg-brand-neutral-300"></span>
+    </div>
+</div>
+
+<!-- ── Servicio 2: Reclutamiento Técnico y Especializado ── -->
+<section class="py-24 bg-brand-neutral-50" id="reclutamiento-tecnico">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+
+            <!-- Bullets izquierda con iconos animados y animación (7 columnas) -->
+            <div class="lg:col-span-7 space-y-6 services-features order-2 lg:order-1" data-delay="100" data-aos="fade-right" data-aos-delay="150">
+
+                <!-- Bullet 1 -->
+                <div class="feature-line group p-6 rounded-2xl hover:bg-white hover:shadow-sm border border-transparent hover:border-brand-neutral-100 transition-all duration-300">
+                    <div class="feature-line-icon">
+                        <svg class="svg-icon-md text-brand-accent group-hover:text-brand-blue-700 transition-colors duration-300" viewBox="0 0 48 48" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path class="doc-page" d="M12 6h20l8 8v28H12z" />
+                            <polyline class="doc-page" points="32,6 32,14 40,14" />
+                            <polyline class="doc-check-mark" points="20,28 24,32 32,24" />
+                        </svg>
+                    </div>
+                    <div>
+                        <strong class="text-brand-black font-semibold text-base block mb-1">Filtrado riguroso</strong>
+                        <span class="text-brand-gray text-sm font-light leading-relaxed">Evaluamos exhaustivamente las competencias técnicas específicas de cada industria.</span>
+                    </div>
+                </div>
+
+                <!-- Bullet 2 -->
+                <div class="feature-line group p-6 rounded-2xl hover:bg-white hover:shadow-sm border border-transparent hover:border-brand-neutral-100 transition-all duration-300">
+                    <div class="feature-line-icon">
+                        <svg class="svg-icon-md text-brand-accent group-hover:text-brand-blue-700 transition-colors duration-300" viewBox="0 0 48 48" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon class="tool-gear-body" points="24 2 27 12 37 12 29 18 32 28 24 22 16 28 19 18 11 12 21 12" />
+                        </svg>
+                    </div>
+                    <div>
+                        <strong class="text-brand-black font-semibold text-base block mb-1">Procesos ágiles y estructurados</strong>
+                        <span class="text-brand-gray text-sm font-light leading-relaxed">Velocidad de respuesta alineada a las necesidades operativas de la planta o proyecto.</span>
+                    </div>
+                </div>
+
+                <!-- Bullet 3 -->
+                <div class="feature-line group p-6 rounded-2xl hover:bg-white hover:shadow-sm border border-transparent hover:border-brand-neutral-100 transition-all duration-300">
+                    <div class="feature-line-icon">
+                        <svg class="svg-icon-md text-brand-accent group-hover:text-brand-blue-700 transition-colors duration-300" viewBox="0 0 48 48" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path class="globe-outer" d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4 4 12.954 4 24s8.954 20 20 20z" />
+                            <path class="globe-detail" d="M4 24h40M24 4c4.5 9 6 15 6 20s-1.5 11-6 20M24 4c-4.5 9-6 15-6 20s1.5 11 6 20" />
+                        </svg>
+                    </div>
+                    <div>
+                        <strong class="text-brand-black font-semibold text-base block mb-1">Red sectorial activa</strong>
+                        <span class="text-brand-gray text-sm font-light leading-relaxed">Base de datos propietaria con especialistas, ingenieros y mandos previamente evaluados.</span>
+                    </div>
+                </div>
+
+                <!-- Bullet 4 -->
+                <div class="feature-line group p-6 rounded-2xl hover:bg-white hover:shadow-sm border border-transparent hover:border-brand-neutral-100 transition-all duration-300">
+                    <div class="feature-line-icon">
+                        <svg class="svg-icon-md text-brand-accent group-hover:text-brand-blue-700 transition-colors duration-300" viewBox="0 0 48 48" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect class="case-body-rect" x="8" y="14" width="32" height="26" rx="3" />
+                            <path class="case-handle-arc" d="M18 14V8a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v6" />
+                            <circle class="case-clasp" cx="24" cy="27" r="2" />
+                        </svg>
+                    </div>
+                    <div>
+                        <strong class="text-brand-black font-semibold text-base block mb-1">Soporte para necesidades específicas</strong>
+                        <span class="text-brand-gray text-sm font-light leading-relaxed">Proyectos especiales de expansión, plantas nuevas o sustitución crítica de talento.</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Texto derecha (5 columnas) -->
+            <div class="lg:col-span-5 order-1 lg:order-2" data-aos="fade-left">
+                <span class="flex items-center gap-3 text-brand-accent font-bold tracking-widest text-xs uppercase mb-5">
+                    <span class="w-8 h-px bg-brand-accent inline-block"></span> Servicio 02
+                </span>
+                <h2 class="font-heading font-bold text-brand-black mb-5" style="font-size: clamp(1.9rem, 3vw, 2.8rem); line-height: 1.15; letter-spacing: -0.02em;">
+                    Reclutamiento Técnico<br>y Especializado
+                </h2>
+                <p class="text-brand-gray font-light text-base leading-relaxed mb-8">
+                    Con enfoque en la agilidad y precisión para mandos medios, posiciones técnicas críticas y perfiles de alta especialidad técnica.
+                </p>
+                <a href="#contacto" class="btn-minimal btn-dark">
+                    Solicitar perfil técnico <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="relative bg-white" id="metodologia">
+    <!-- Layout split: scrollable text list on the left, sticky image on the right edge-to-edge -->
+    <div class="w-full flex flex-col lg:flex-row items-start min-h-[600px]">
+        
+        <!-- Columna izquierda: Información y Bullets (se desplaza con scroll) -->
+        <div class="w-full lg:w-1/2 px-4 sm:px-6 lg:px-16 py-24 flex flex-col justify-center">
+            <div class="max-w-xl space-y-8">
+                <div data-aos="fade-right">
+                    <span class="text-brand-accent font-bold tracking-widest text-xs uppercase mb-3 block">Nuestra Operación</span>
+                    <h2 class="text-3xl md:text-h2 font-heading font-medium tracking-tight text-brand-black mb-4">Metodología de Rigor Técnico</h2>
+                    <p class="text-brand-gray font-light text-base leading-relaxed">
+                        Un proceso estructurado, minucioso y transparente diseñado para garantizar el acoplamiento perfecto.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Bullet 1 -->
+                    <div class="flex items-start gap-5 group p-6 rounded-3xl hover:bg-brand-neutral-50 transition-all duration-300 border border-transparent hover:border-brand-neutral-100" data-aos="fade-up">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-accent/10 text-brand-accent flex items-center justify-center font-heading font-bold text-lg transition-transform duration-300 group-hover:scale-110">
+                            01
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-heading font-semibold text-brand-black mb-1">Diagnóstico técnico del rol</h4>
+                            <p class="text-brand-gray text-sm font-light leading-relaxed">Entendemos el contexto de la posición, los objetivos del negocio, el entorno operativo, la cultura y los retos específicos del sector.</p>
+                        </div>
+                    </div>
+
+                    <!-- Bullet 2 -->
+                    <div class="flex items-start gap-5 group p-6 rounded-3xl hover:bg-brand-neutral-50 transition-all duration-300 border border-transparent hover:border-brand-neutral-100" data-aos="fade-up" data-aos-delay="50">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-accent/10 text-brand-accent flex items-center justify-center font-heading font-bold text-lg transition-transform duration-300 group-hover:scale-110">
+                            02
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-heading font-semibold text-brand-black mb-1">Inmersión en la operación <span class="text-[10px] uppercase bg-brand-teal/20 text-brand-blue-900 px-2 py-0.5 rounded-full font-medium ml-2">Recomendado</span></h4>
+                            <p class="text-brand-gray text-sm font-light leading-relaxed">Cuando el cliente lo considera conveniente, recomendamos realizar una visita física a sus instalaciones para conocer de primera mano la operación, el entorno de trabajo y los retos reales de la posición. Esto nos permite comunicar mejor la oportunidad al mercado y evaluar con mayor precisión el match entre la empresa, el rol y los candidatos.</p>
+                        </div>
+                    </div>
+
+                    <!-- Bullet 3 -->
+                    <div class="flex items-start gap-5 group p-6 rounded-3xl hover:bg-brand-neutral-50 transition-all duration-300 border border-transparent hover:border-brand-neutral-100" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-accent/10 text-brand-accent flex items-center justify-center font-heading font-bold text-lg transition-transform duration-300 group-hover:scale-110">
+                            03
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-heading font-semibold text-brand-black mb-1">Mapeo de mercado</h4>
+                            <p class="text-brand-gray text-sm font-light leading-relaxed">Identificamos empresas objetivo, perfiles relevantes y talento estratégico dentro del ecosistema industrial donde se encuentra el tipo de experiencia que la posición requiere.</p>
+                        </div>
+                    </div>
+
+                    <!-- Bullet 4 -->
+                    <div class="flex items-start gap-5 group p-6 rounded-3xl hover:bg-brand-neutral-50 transition-all duration-300 border border-transparent hover:border-brand-neutral-100" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-accent/10 text-brand-accent flex items-center justify-center font-heading font-bold text-lg transition-transform duration-300 group-hover:scale-110">
+                            04
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-heading font-semibold text-brand-black mb-1">Sourcing especializado</h4>
+                            <p class="text-brand-gray text-sm font-light leading-relaxed">Activamos una búsqueda directa, confidencial y enfocada en perfiles que no siempre participan de forma activa en portales de empleo o procesos abiertos.</p>
+                        </div>
+                    </div>
+
+                    <!-- Bullet 5 -->
+                    <div class="flex items-start gap-5 group p-6 rounded-3xl hover:bg-brand-neutral-50 transition-all duration-300 border border-transparent hover:border-brand-neutral-100" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-accent/10 text-brand-accent flex items-center justify-center font-heading font-bold text-lg transition-transform duration-300 group-hover:scale-110">
+                            05
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-heading font-semibold text-brand-black mb-1">Evaluación integral</h4>
+                            <p class="text-brand-gray text-sm font-light leading-relaxed">Analizamos experiencia técnica, trayectoria profesional, liderazgo, motivadores de cambio, expectativas económicas y compatibilidad con la cultura y el contexto de la organización.</p>
+                        </div>
+                    </div>
+
+                    <!-- Bullet 6 -->
+                    <div class="flex items-start gap-5 group p-6 rounded-3xl hover:bg-brand-neutral-50 transition-all duration-300 border border-transparent hover:border-brand-neutral-100" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-accent/10 text-brand-accent flex items-center justify-center font-heading font-bold text-lg transition-transform duration-300 group-hover:scale-110">
+                            06
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-heading font-semibold text-brand-black mb-1">Presentación de shortlist</h4>
+                            <p class="text-brand-gray text-sm font-light leading-relaxed">Compartimos una terna o grupo reducido de candidatos alineados al perfil, con información clara sobre su experiencia, motivadores, fortalezas y puntos relevantes para la toma de decisión.</p>
+                        </div>
+                    </div>
+
+                    <!-- Bullet 7 -->
+                    <div class="flex items-start gap-5 group p-6 rounded-3xl hover:bg-brand-neutral-50 transition-all duration-300 border border-transparent hover:border-brand-neutral-100" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-accent/10 text-brand-accent flex items-center justify-center font-heading font-bold text-lg transition-transform duration-300 group-hover:scale-110">
+                            07
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-heading font-semibold text-brand-black mb-1">Acompañamiento hasta el cierre e integración</h4>
+                            <p class="text-brand-gray text-sm font-light leading-relaxed">Apoyamos entrevistas, retroalimentación, negociación, referencias y seguimiento posterior a la incorporación para cuidar la experiencia de cliente y candidato, y favorecer una transición ordenada.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Columna derecha: Imagen estática y pegada a los bordes (Sticky en LG) -->
+        <div class="w-full lg:w-1/2 lg:sticky lg:top-24 h-[400px] lg:h-[calc(100vh-96px)] overflow-hidden relative">
+            <div class="w-full h-full" data-aos="fade-left">
+                <img src="assets/img/aerospace_control.png" alt="Metodología DAMA" class="w-full h-full object-cover grayscale contrast-[1.05] hover:scale-105 hover:grayscale-0 transition-all duration-700">
+                <div class="absolute inset-0 bg-brand-blue-900/10 mix-blend-multiply"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Preguntas Frecuentes (Nyssa Version 2 Accordion Section) -->
+<section class="py-24 bg-brand-neutral-50 border-t border-b border-brand-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Columna izquierda: Información y Gráfico -->
+            <div class="lg:col-span-5" data-aos="fade-right">
+                <span class="text-brand-accent font-bold tracking-widest text-xs uppercase mb-3 block">Preguntas Frecuentes</span>
+                <h2 class="text-3xl md:text-h2 font-heading font-medium tracking-tight text-brand-black mb-4">Dudas Comunes</h2>
+                <p class="text-brand-gray font-light mb-8">Todo lo que necesitas saber sobre nuestra metodología y alcance en la industria.</p>
+                <div class="max-w-md mx-auto lg:mx-0">
+                    <img src="assets/img/faq_illustration.png" alt="Preguntas Frecuentes DAMA" class="w-full h-auto object-contain mix-blend-multiply hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+
+            <!-- Columna derecha: Acordeones -->
+            <div class="lg:col-span-7 space-y-4" data-aos="fade-left">
+                <!-- FAQ 1 -->
+                <div class="faq-item border border-gray-200 bg-white rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-trigger flex justify-between items-center w-full p-6 text-left font-heading font-semibold text-brand-black text-lg focus:outline-none">
+                        <span>¿Cómo manejan la confidencialidad de la información?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-gray faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer-wrapper">
+                        <div class="faq-answer px-6 pb-6 text-brand-gray font-light text-sm md:text-base leading-relaxed">
+                            Manejamos un estricto protocolo de confidencialidad y anonimato. La información de la empresa cliente y la identidad de los candidatos no se revelan en las etapas iniciales de prospección. Solo compartimos datos específicos bajo acuerdos firmados y con el consentimiento explícito de ambas partes.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item border border-gray-200 bg-white rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-trigger flex justify-between items-center w-full p-6 text-left font-heading font-semibold text-brand-black text-lg focus:outline-none">
+                        <span>¿Qué cubre exactamente el esquema de garantía de hasta 12 meses?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-gray faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer-wrapper">
+                        <div class="faq-answer px-6 pb-6 text-brand-gray font-light text-sm md:text-base leading-relaxed">
+                            Nuestra garantía protege tu inversión en caso de que el candidato seleccionado decida separarse del rol o no cumpla con las expectativas operativas iniciales dentro del periodo acordado. En dicho caso, reactivamos el proceso de reclutamiento y selección sin ningún costo adicional para encontrar el reemplazo idóneo.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item border border-gray-200 bg-white rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-trigger flex justify-between items-center w-full p-6 text-left font-heading font-semibold text-brand-black text-lg focus:outline-none">
+                        <span>¿Por qué es importante la visita de inmersión técnica a las instalaciones?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-gray faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer-wrapper">
+                        <div class="faq-answer px-6 pb-6 text-brand-gray font-light text-sm md:text-base leading-relaxed">
+                            En las posiciones industriales y operativas, los retos reales de infraestructura, clima laboral, tecnología de maquinaria y cultura interna no se pueden plasmar en una descripción de puesto tradicional. Visitar tus instalaciones nos permite evaluar la compatibilidad cultural y técnica de los candidatos con una precisión quirúrgica, mejorando la retención de talento a largo plazo.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item border border-gray-200 bg-white rounded-2xl overflow-hidden transition-all duration-300">
+                    <button class="faq-trigger flex justify-between items-center w-full p-6 text-left font-heading font-semibold text-brand-black text-lg focus:outline-none">
+                        <span>¿Tienen alcance nacional o internacional?</span>
+                        <i class="fa-solid fa-chevron-down text-brand-gray faq-chevron"></i>
+                    </button>
+                    <div class="faq-answer-wrapper">
+                        <div class="faq-answer px-6 pb-6 text-brand-gray font-light text-sm md:text-base leading-relaxed">
+                            Tenemos un fuerte enfoque en el mercado mexicano (incluyendo las principales zonas industriales y fronterizas del país) pero gracias a nuestra red activa de contactos, podemos localizar directivos e ingenieros especializados a nivel global con intenciones de relocalización o trabajo internacional.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Garantía (Trust Signal de Alto Impacto) -->
+<section class="bg-brand-blue-900 text-white dark-section relative overflow-hidden" style="min-height: 520px;">
+
+    <!-- Layout split: text left, image fills right edge-to-edge -->
+    <div class="relative flex flex-col lg:flex-row items-stretch min-h-[520px]">
+
+        <!-- Columna izquierda: Texto y bullets (con padding propio) -->
+        <div class="flex-1 flex items-center py-24 px-8 md:px-16 lg:px-20 xl:px-28" data-aos="fade-right">
+            <div class="max-w-xl">
+                <span class="text-brand-accent font-bold tracking-widest text-xs uppercase mb-4 block">Compromiso DAMA</span>
+                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-6 tracking-tight leading-tight">
+                    Reclutamiento con hasta<br>
+                    <span class="text-brand-accent">12 meses de garantía.</span>
+                </h2>
+                <p class="text-gray-300 font-light text-base md:text-lg leading-relaxed mb-10">
+                    En <strong class="text-white font-medium">DAMA Talent Solutions</strong> confiamos en la solidez de nuestra metodología y en la calidad de nuestros procesos de evaluación.
+                </p>
+
+                <ul class="space-y-6 mb-10">
+
+                    <!-- Item 1: Protección de inversión — Shield Icon -->
+                    <li class="group flex items-start gap-5 cursor-default">
+                        <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center text-white">
+                            <svg class="svg-icon-md" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <!-- glow halo -->
+                                <circle cx="14" cy="14" r="13" class="shield-glow" fill="#F59E0B" stroke="none"/>
+                                <!-- shield shape -->
+                                <path d="M14 3 L23 7 L23 14 C23 19 18.5 23 14 25 C9.5 23 5 19 5 14 L5 7 Z" class="shield-body"/>
+                                <!-- check inside -->
+                                <polyline points="10,14 13,17 18,11" class="shield-check-draw" stroke-width="1.8"/>
+                            </svg>
+                        </div>
+                        <span class="text-gray-200 font-light leading-relaxed pt-2">
+                            <strong class="text-white font-medium block mb-0.5">Protección de inversión</strong>
+                            Reactivamos el proceso sin costo si el candidato no cumple las expectativas dentro del periodo garantizado.
+                        </span>
+                    </li>
+
+                    <!-- Item 2: Esquemas personalizados — Target Icon -->
+                    <li class="group flex items-start gap-5 cursor-default">
+                        <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center text-white">
+                            <svg class="svg-icon-md" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                                <circle cx="14" cy="14" r="12" class="g-target-ring g-target-ring-outer"/>
+                                <circle cx="14" cy="14" r="7" class="g-target-ring g-target-ring-mid"/>
+                                <circle cx="14" cy="14" r="2.5" class="g-target-dot" stroke="none"/>
+                            </svg>
+                        </div>
+                        <span class="text-gray-200 font-light leading-relaxed pt-2">
+                            <strong class="text-white font-medium block mb-0.5">Esquemas personalizados</strong>
+                            Condiciones de garantía definidas según el tipo de posición, nivel de responsabilidad y acuerdos comerciales.
+                        </span>
+                    </li>
+
+                    <!-- Item 3: Seguimiento post-colocación — Handshake Icon -->
+                    <li class="group flex items-start gap-5 cursor-default">
+                        <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center text-white">
+                            <svg class="svg-icon-md" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 14 C3 10 6 8 9 8 L13 11 L15 11 L19 8 C22 8 25 10 25 14" class="g-handshake-body"/>
+                                <path d="M13 11 L12 14 L16 14 L15 11" class="g-handshake-body"/>
+                                <path d="M3 14 L5 18 M25 14 L23 18" class="g-handshake-body"/>
+                                <path d="M5 18 Q9 22 14 22 Q19 22 23 18" class="g-handshake-body"/>
+                            </svg>
+                        </div>
+                        <span class="text-gray-200 font-light leading-relaxed pt-2">
+                            <strong class="text-white font-medium block mb-0.5">Seguimiento post-colocación</strong>
+                            Acompañamos la integración del talento para favorecer una transición ordenada y duradera.
+                        </span>
+                    </li>
+
+                </ul>
+
+                <a href="#contacto" class="btn-minimal btn-white inline-flex">
+                    Solicitar información <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Columna derecha: Imagen que llega hasta el borde de la sección -->
+        <div class="relative lg:w-[48%] flex-shrink-0 overflow-hidden bg-brand-blue-700/20" data-aos="fade-left" data-aos-delay="150">
+            <!-- Glow sutil -->
+            <div class="absolute inset-0 bg-gradient-to-l from-transparent to-brand-blue-900/60 z-10"></div>
+            <img
+                src="assets/img/garantia_reclutamiento.png"
+                alt="Garantía de reclutamiento DAMA Talent Solutions — 12 meses"
+                class="absolute inset-0 w-full h-full object-cover object-center"
+                style="filter: brightness(0.92) saturate(1.1);"
+            />
+        </div>
+
+    </div>
+</section>
+
+<!-- Sección dividida de acción para ambos perfiles (Micro-conversión) -->
+<section class="py-16 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+            <!-- Empresa -->
+            <div class="pb-12 md:pb-0 md:pr-12 flex flex-col justify-between" data-aos="fade-right">
+                <div class="mb-8">
+                    <span class="text-brand-accent font-bold tracking-widest text-xs uppercase mb-3 block">B2B / Empresas</span>
+                    <h3 class="text-2xl font-heading font-medium text-brand-black mb-4">¿Tu empresa necesita cubrir una posición crítica?</h3>
+                    <p class="text-brand-gray font-light text-sm md:text-base leading-relaxed">
+                        Conversemos sobre el contexto del rol, los retos de la búsqueda y el perfil de talento que necesita tu organización.
+                    </p>
+                </div>
+                <div>
+                    <a href="#contacto-empresa" class="btn-minimal btn-dark">
+                        Solicitar diagnóstico de talento <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <p class="text-xs text-brand-gray mt-3 font-light">Revisaremos tu necesidad para definir el mejor enfoque de búsqueda.</p>
+                </div>
+            </div>
+
+            <!-- Candidato -->
+            <div class="pt-12 md:pt-0 md:pl-12 flex flex-col justify-between" data-aos="fade-left">
+                <div class="mb-8">
+                    <span class="text-brand-teal font-bold tracking-widest text-xs uppercase mb-3 block">B2C / Especialistas</span>
+                    <h3 class="text-2xl font-heading font-medium text-brand-black mb-4">¿Eres especialista y buscas tu siguiente oportunidad?</h3>
+                    <p class="text-brand-gray font-light text-sm md:text-base leading-relaxed">
+                        Comparte tu perfil para ser considerado en procesos confidenciales de headhunting y futuras vacantes alineadas a tu experiencia.
+                    </p>
+                </div>
+                <div>
+                    <a href="#contacto-candidato" class="btn-minimal btn-outline">
+                        Cargar mi CV <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <p class="text-xs text-brand-gray mt-3 font-light">Registro 100% confidencial y sin costo para candidatos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Contact Form -->
+<footer class="bg-brand-black text-white pt-32 pb-12 dark-section" id="contacto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-20" data-aos="fade-up">
+            <h2 class="text-4xl md:text-h1 font-heading font-medium tracking-tight mb-6">¿Listo para fortalecer tu equipo o dar el siguiente paso en tu carrera?</h2>
+            <p class="text-xl text-brand-accent font-light">Hablemos hoy mismo.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-16 lg:gap-32 mb-32">
+            
+            <!-- Empresa -->
+            <div data-aos="fade-up" data-aos-delay="100" id="contacto-empresa">
+                <h3 class="text-xl md:text-h3 font-heading font-medium mb-2">¿Eres una empresa?</h3>
+                <p class="text-gray-400 mb-10 font-light">Solicitud de propuesta de talento (diagnóstico inicial sin costo).</p>
+                
+                <form>
+                    <div class="minimal-input">
+                        <input type="text" id="e_nombre" placeholder=" ">
+                        <label for="e_nombre">Nombre y Apellido</label>
+                    </div>
+                    <div class="minimal-input">
+                        <input type="text" id="e_empresa" placeholder=" ">
+                        <label for="e_empresa">Nombre de la Empresa</label>
+                    </div>
+                    <div class="minimal-input">
+                        <input type="email" id="e_email" placeholder=" ">
+                        <label for="e_email">Correo Corporativo</label>
+                    </div>
+                    <div class="mt-10">
+                        <button type="button" class="btn-minimal btn-white w-full justify-center">Enviar Solicitud <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Candidato -->
+            <div data-aos="fade-up" data-aos-delay="200" id="contacto-candidato">
+                <h3 class="text-xl md:text-h3 font-heading font-medium mb-2">¿Eres un candidato?</h3>
+                <p class="text-gray-400 mb-10 font-light">Adjunta tu CV. Todo el proceso es 100% confidencial.</p>
+                
+                <form>
+                    <div class="minimal-input">
+                        <input type="text" id="c_nombre" placeholder=" ">
+                        <label for="c_nombre">Nombre Completo</label>
+                    </div>
+                    <div class="minimal-input">
+                        <input type="email" id="c_email" placeholder=" ">
+                        <label for="c_email">Correo Electrónico</label>
+                    </div>
+                    
+                    <div class="mt-8 mb-8">
+                        <label class="block w-full border border-gray-700 border-dashed rounded-xl p-8 text-center cursor-pointer hover:border-brand-accent hover:bg-white/5 transition-colors group">
+                            <span class="block text-gray-400 font-heading font-medium uppercase tracking-widest text-xs mb-2 group-hover:text-white transition-colors">Adjuntar Currículum</span>
+                            <span class="text-gray-600 text-xs font-light">(PDF o DOCX, máx 5MB)</span>
+                            <input type="file" class="hidden">
+                        </label>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <button type="button" class="btn-minimal btn-outline border-gray-700 text-white w-full justify-center hover:bg-brand-accent hover:border-brand-accent hover:text-brand-black">Enviar Perfil <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+        
+        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs uppercase tracking-widest text-gray-500 font-heading">
+            <div class="flex items-center gap-2 mb-4 md:mb-0">
+                <span>&copy; 2026 DAMA TALENT SOLUTIONS.</span>
+            </div>
+            <div class="flex space-x-8">
+                <a href="#" class="hover:text-white transition-colors">Privacidad</a>
+                <a href="#" class="hover:text-white transition-colors">Términos</a>
+                <a href="#" class="hover:text-brand-accent transition-colors">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    // Initialize AOS
+    AOS.init({
+        once: true,
+        offset: 50,
+        duration: 1000,
+        easing: 'ease-out-cubic',
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+        const nav = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            nav.classList.add('shadow-sm');
+            nav.classList.replace('h-24', 'h-20');
+        } else {
+            nav.classList.remove('shadow-sm');
+            nav.classList.replace('h-20', 'h-24');
+        }
+    });
+
+    // FAQ Accordion Trigger Logic
+    const faqTriggers = document.querySelectorAll('.faq-trigger');
+    faqTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const item = trigger.closest('.faq-item');
+            const isActive = item.classList.contains('active');
+            
+            // Close other items
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+
+            // Toggle active state on clicked item
+            if (!isActive) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    });
+
+    // ── Orbital Diagram Interactivity ──
+    document.querySelectorAll('.orbital-wrapper').forEach(wrapper => {
+        const centerId = wrapper.id + '-center';
+        const center = document.getElementById(centerId);
+        const titleEl = center ? center.querySelector('.orbital-center-title') : null;
+        const textEl  = center ? center.querySelector('.orbital-center-text') : null;
+        const nodes   = wrapper.querySelectorAll('.orbital-node');
+
+        nodes.forEach(node => {
+            node.addEventListener('mouseenter', () => {
+                // deactivate all
+                nodes.forEach(n => n.classList.remove('active'));
+                node.classList.add('active');
+                // update center
+                if (titleEl) titleEl.textContent = node.dataset.title || '';
+                if (textEl)  textEl.textContent  = node.dataset.text  || '';
+            });
+            node.addEventListener('mouseleave', () => {
+                // keep node highlighted; reset center to first node on full leave
+            });
+            node.addEventListener('click', () => {
+                nodes.forEach(n => n.classList.remove('active'));
+                node.classList.add('active');
+            });
+        });
+
+        // reset center when leaving the whole wrapper
+        wrapper.addEventListener('mouseleave', () => {
+            const firstNode = nodes[0];
+            if (firstNode && titleEl) {
+                nodes.forEach(n => n.classList.remove('active'));
+                firstNode.classList.add('active');
+                titleEl.textContent = firstNode.dataset.title || '';
+                textEl.textContent  = firstNode.dataset.text  || '';
+            }
+        });
+    });
+
+    // ── Feature Lines Staggered Entrance Animation ──
+    const featureObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const lines = entry.target.querySelectorAll('.feature-line');
+                const baseDelay = parseInt(entry.target.dataset.delay || '0');
+                lines.forEach((line, i) => {
+                    setTimeout(() => line.classList.add('visible'), baseDelay + i * 120);
+                });
+                featureObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.services-features').forEach(el => featureObserver.observe(el));
+
+</script>
+
+</body>
+</html>
