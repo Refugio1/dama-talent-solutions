@@ -397,11 +397,8 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
         <div class="flex justify-between items-center h-full transition-all duration-300">
             <div class="flex-shrink-0 flex items-center gap-2">
-                <a href="index-split.html" class="flex items-center gap-2">
-                    <div class="w-8 h-8 bg-brand-black text-white flex items-center justify-center rounded-sm">
-                        <i class="fa-solid fa-layer-group text-sm"></i>
-                    </div>
-                    <span class="font-heading font-bold text-2xl tracking-tighter">DAMA<span class="text-brand-accent">.</span></span>
+                <a href="index-split.html" class="flex items-center">
+                    <img src="assets/img/Logo.png" alt="DAMA Talent Solutions" style="width: 118.14px; height: 77px;" class="object-contain">
                 </a>
             </div>
             <div class="hidden md:flex space-x-10">
@@ -415,9 +412,39 @@
                     Hablemos <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
+            <!-- Hamburger menu button -->
+            <div class="flex items-center md:hidden">
+                <button id="mobile-menu-button" type="button" class="text-brand-black hover:text-brand-accent focus:outline-none transition-colors" aria-label="Toggle menu">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="4" y1="12" x2="20" y2="12"></line>
+                        <line x1="4" y1="6" x2="20" y2="6"></line>
+                        <line x1="4" y1="18" x2="20" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
         </div>
     </div>
 </nav>
+
+<!-- Mobile Menu Drawer -->
+<div id="mobile-menu" class="fixed inset-0 z-[100] bg-white/95 backdrop-blur-xl transition-transform duration-300 transform translate-x-full md:hidden flex flex-col justify-center items-center">
+    <!-- Close Button -->
+    <button id="mobile-menu-close" class="absolute top-8 right-8 text-brand-black hover:text-brand-accent transition-colors" aria-label="Close menu">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+    </button>
+    <div class="flex flex-col items-center space-y-8 text-center">
+        <a href="index-split.html" class="mobile-nav-link text-brand-gray hover:text-brand-black text-xl font-semibold uppercase tracking-widest transition-colors">Home</a>
+        <a href="index-split.html#soluciones" class="mobile-nav-link text-brand-gray hover:text-brand-black text-xl font-semibold uppercase tracking-widest transition-colors">Nosotros</a>
+        <a href="#" class="mobile-nav-link text-brand-black hover:text-brand-accent text-xl font-semibold uppercase tracking-widest transition-colors">Servicios</a>
+        <a href="#contacto" class="mobile-nav-link text-brand-gray hover:text-brand-black text-xl font-semibold uppercase tracking-widest transition-colors">Contacto</a>
+        <a href="#contacto" class="mobile-nav-link btn-minimal btn-dark mt-4">
+            Hablemos <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
 
 <!-- Hero Section — Mosaic Layout -->
 <header class="relative overflow-hidden" style="padding-top: 96px; background-color: #0e2a47;">
@@ -1510,6 +1537,34 @@
 
     document.querySelectorAll('.services-features').forEach(el => featureObserver.observe(el));
 
+    // Mobile menu toggle
+    function initMobileMenu() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        if (mobileMenuButton && mobileMenu && mobileMenuClose) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.remove('translate-x-full');
+            });
+
+            mobileMenuClose.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+            });
+
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('translate-x-full');
+                });
+            });
+        }
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMobileMenu);
+    } else {
+        initMobileMenu();
+    }
 </script>
 
 </body>
