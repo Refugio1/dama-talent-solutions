@@ -1,0 +1,196 @@
+﻿Diagnose log at 2026-06-16T19:41:25Z
+
+AppPath: C:\Program Files\Git\mingw64\bin\git-credential-manager.exe
+InstallDir: C:\Program Files\Git\mingw64\bin\
+Version: 2.7.3+5fa7116896c82164996a609accd1c5ad90fe730a
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Windows
+OSVersion: 10.0 (build 26200)
+Reading environment variables... OK
+ Variables:
+SystemDrive=C:
+ProgramFiles(x86)=C:\Program Files (x86)
+MSYSTEM=MINGW64
+ProgramW6432=C:\Program Files
+EFC_7728_1592913036=1
+PROCESSOR_IDENTIFIER=AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD
+TMP=C:\Users\refug\AppData\Local\Temp
+PROCESSOR_ARCHITECTURE=AMD64
+VSCODE_GIT_ASKPASS_MAIN=c:\Users\refug\AppData\Local\Programs\Antigravity IDE\resources\app\extensions\git\dist\askpass-main.js
+Path=C:/Program Files/Git/mingw64/libexec/git-core;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\refug\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Go\bin;C:\Users\refug\AppData\Local\Microsoft\WindowsApps;C:\Users\refug\AppData\Local\Programs\Antigravity IDE\bin;C:\Users\refug\go\bin;c:\Users\refug\.antigravity-ide\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\scripts\noConfigScripts
+VSCODE_GIT_IPC_HANDLE=\\.\pipe\vscode-git-6da42d3555-sock
+USERDOMAIN=REFUGIO
+PROCESSOR_REVISION=5000
+TEMP=C:\Users\refug\AppData\Local\Temp
+USERPROFILE=C:\Users\refug
+LOGONSERVER=\\REFUGIO
+TERM=xterm-256color
+PYDEVD_DISABLE_FILE_VALIDATION=1
+USERNAME=refug
+SystemRoot=C:\WINDOWS
+VSCODE_DEBUGPY_ADAPTER_ENDPOINTS=c:\Users\refug\.antigravity-ide\extensions\ms-python.debugpy-2026.6.0-win32-x64\.noConfigDebugAdapterEndpoints\endpoint-02d89949b4f9438a.txt
+CHROME_CRASHPAD_PIPE_NAME=\\.\pipe\crashpad_28688_TNPKRWNFSYNZQFZX
+GIT_EXEC_PATH=C:/Program Files/Git/mingw64/libexec/git-core
+PLINK_PROTOCOL=ssh
+OneDrive=C:\Users\refug\OneDrive
+USERDOMAIN_ROAMINGPROFILE=REFUGIO
+VSCODE_NONCE=2b252dca-2076-466c-991d-7ecc8e81e295
+CommonProgramFiles=C:\Program Files\Common Files
+VSCODE_INJECTION=1
+PYTHON_BASIC_REPL=1
+ProgramData=C:\ProgramData
+LANG=en_US.UTF-8
+GIT_ASKPASS=c:\Users\refug\AppData\Local\Programs\Antigravity IDE\resources\app\extensions\git\dist\askpass.sh
+HOMEPATH=\Users\refug
+OneDriveConsumer=C:\Users\refug\OneDrive
+COMPUTERNAME=REFUGIO
+PYTHONSTARTUP=c:\Users\refug\AppData\Roaming\Antigravity IDE\User\workspaceStorage\a5a40541911368a8b97d0ef4d01ea8b9\ms-python.python\pythonrc.py
+ALLUSERSPROFILE=C:\ProgramData
+CommonProgramW6432=C:\Program Files\Common Files
+VSCODE_A11Y_MODE=0
+ANTIGRAVITY_CLI_ALIAS=agy-ide
+SESSIONNAME=Console
+TERM_PROGRAM=vscode
+DriverData=C:\Windows\System32\Drivers\DriverData
+HOMEDRIVE=C:
+windir=C:\WINDOWS
+GIT_TRACE2_PARENT_SID=04dccef0-ddfe-4bc4-83f1-6c8b304a5bfd
+VSCODE_GIT_ASKPASS_NODE=C:\Users\refug\AppData\Local\Programs\Antigravity IDE\Antigravity IDE.exe
+NUMBER_OF_PROCESSORS=16
+OS=Windows_NT
+ProgramFiles=C:\Program Files
+ComSpec=C:\WINDOWS\system32\cmd.exe
+VSCODE_STABLE=1
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+HOME=C:\Users\refug
+PSModulePath=C:\Users\refug\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+TMPDIR=C:\Users\refug\AppData\Local\Temp
+APPDATA=C:\Users\refug\AppData\Roaming
+EFC_7728_4126798990=1
+PROCESSOR_LEVEL=25
+LOCALAPPDATA=C:\Users\refug\AppData\Local
+BUNDLED_DEBUGPY_PATH=c:\Users\refug\.antigravity-ide\extensions\ms-python.debugpy-2026.6.0-win32-x64\bundled\libs\debugpy
+TERM_PROGRAM_VERSION=1.107.0
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+COLORTERM=truecolor
+PUBLIC=C:\Users\Public
+GOPATH=C:\Users\refug\go
+VSCODE_GIT_ASKPASS_EXTRA_ARGS=
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is 'C:\Users\refug\AppData\Local\Temp\'...
+Checking basic file I/O...
+Writing to temporary file 'C:\Users\refug\AppData\Local\Temp\197b400d9d2d35e7bcab6317'... OK
+Reading from temporary file 'C:\Users\refug\AppData\Local\Temp\197b400d9d2d35e7bcab6317'... OK
+Deleting temporary file 'C:\Users\refug\AppData\Local\Temp\197b400d9d2d35e7bcab6317'... OK
+Testing IFileSystem instance...
+UserHomePath: C:\Users\refug
+UserDataDirectoryPath: C:\Users\refug\.gcm
+GetCurrentDirectory(): R:\Estrasol\Pruebas Antigravity\Taller de expreso 2
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com...Sending HEAD request to https://example.com... OK
+ OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:61060/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.54.0.windows.1'
+Locating current repository...Git repository at 'R:/Estrasol/Pruebas Antigravity/Taller de expreso 2/.git'
+ OK
+Listing all Git configuration... OK
+Git configuration:
+file:C:/Program Files/Git/etc/gitconfig	diff.astextplain.textconv=astextplain
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.clean=git-lfs clean -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.process=git-lfs filter-process
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.required=true
+file:C:/Program Files/Git/etc/gitconfig	http.sslbackend=openssl
+file:C:/Program Files/Git/etc/gitconfig	http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+file:C:/Program Files/Git/etc/gitconfig	core.autocrlf=true
+file:C:/Program Files/Git/etc/gitconfig	core.fscache=true
+file:C:/Program Files/Git/etc/gitconfig	core.symlinks=false
+file:C:/Program Files/Git/etc/gitconfig	pull.rebase=false
+file:C:/Program Files/Git/etc/gitconfig	credential.helper=manager
+file:C:/Program Files/Git/etc/gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:C:/Program Files/Git/etc/gitconfig	init.defaultbranch=main
+file:C:/Users/refug/.gitconfig	safe.directory=R:/Estrasol/Pruebas Antigravity/Taller de expreso 2
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=false
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	core.ignorecase=true
+file:.git/config	user.name=Refugio1
+file:.git/config	user.email=refugio1@users.noreply.github.com
+file:.git/config	remote.origin.url=https://github.com/Refugio1/dama-talent-solutions.git
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+file:.git/config	branch.main.remote=origin
+file:.git/config	branch.main.merge=refs/heads/main
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: True
+Exception: None
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential... OK
+Reading test credential... OK
+Deleting test credential... OK
+
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker is not enabled.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: C:\Users\refug\AppData\Local\.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: C:\Users\refug\AppData\Local\.IdentityService\msal.cache
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+

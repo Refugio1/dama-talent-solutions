@@ -78,7 +78,7 @@
     
     <style>
         html, body {
-            overflow-x: hidden;
+            overflow-x: clip;
             width: 100%;
         }
         body {
@@ -317,17 +317,9 @@
             }
         }
         
-        /* Rotator Animation styles */
-        .text-rotator-word {
+        /* Rotator Animation styles */`r`n        .text-rotator-word {
             display: inline-block;
-            text-align: center;
-            min-width: 190px;
             transition: all 0.5s ease;
-        }
-        @media (min-width: 768px) {
-            .text-rotator-word {
-                min-width: 440px;
-            }
         }
         .text-rotator-word.fade-out {
             opacity: 0;
@@ -926,7 +918,8 @@
         <div class="text-center max-w-5xl mx-auto mb-8" data-aos="fade-up" data-aos-duration="1200">
             <span class="text-brand-accent font-bold tracking-widest text-sm uppercase mb-4 block">Executive Search</span>
             <h1 class="text-4xl md:text-h1 font-heading font-medium tracking-tight text-brand-black leading-tight mb-6">
-                Headhunting Ejecutivo para Sectores <span class="italic font-light text-brand-gray text-rotator-word">Técnicos</span> en México.
+                <span class="block">Headhunting Ejecutivo para</span>
+                <span class="block">Sectores <span class="italic font-light text-brand-gray text-rotator-word">Técnicos</span> en México.</span>
             </h1>
             <p class="text-lg md:text-body text-brand-black font-medium max-w-4xl mx-auto leading-relaxed mb-4">
                 Conectamos empresas industriales con líderes capaces de operar, transformar y escalar negocios técnicamente complejos.
@@ -952,7 +945,7 @@
                         <a href="#contacto-empresa" class="btn-minimal btn-white text-base">
                             Soy una Empresa (Busco Talento) <i class="fa-solid fa-arrow-right"></i>
                         </a>
-                        <p class="text-xs text-gray-300 mt-3 font-light tracking-wide">Agenda un diagnóstico inicial sin costo.</p>
+                        <p class="text-[14px] text-white mt-3 font-light tracking-wide">Agenda un diagnóstico inicial sin costo.</p>
                     </div>
 
                     <!-- CTA Candidato -->
@@ -960,7 +953,7 @@
                         <a href="#contacto-candidato" class="btn-minimal btn-outline border-white/30 text-white hover:border-white hover:bg-white hover:text-brand-black text-base">
                             Soy un Candidato (Cargar mi CV) <i class="fa-solid fa-arrow-right"></i>
                         </a>
-                        <p class="text-xs text-gray-400 mt-3 font-light tracking-wide">Gestión bajo estricta confidencialidad.</p>
+                        <p class="text-[14px] text-white mt-3 font-light tracking-wide">Gestión bajo estricta confidencialidad.</p>
                     </div>
                 </div>
             </div>
@@ -1007,13 +1000,13 @@
             <!-- Cajas de Acción derecha -->
             <div class="lg:col-span-7 grid sm:grid-cols-2 gap-6" data-aos="fade-left">
                 <!-- Caja 1 -->
-                <div class="bg-brand-black/40 border border-white/10 rounded-3xl p-8 hover:border-brand-accent transition-all duration-300 flex flex-col justify-between h-64 group">
+                <div class="bg-brand-black/40 border border-white/10 rounded-3xl p-8 hover:border-brand-accent transition-all duration-300 flex flex-col justify-between h-full group">
                     <div>
                         <div class="w-12 h-12 flex items-center justify-start mb-4">
                             <svg class="svg-icon text-brand-accent group-hover:text-white transition-colors duration-300" viewBox="0 0 48 48" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle class="search-lens" cx="20" cy="20" r="11" /><line class="search-handle" x1="28" y1="28" x2="40" y2="40" stroke-width="3" /></svg>
                         </div>
                         <h3 class="text-xl font-heading font-medium text-white mb-2">Explorar Vacantes</h3>
-                        <p class="text-gray-400 text-xs font-light leading-relaxed">Filtra por sector y especialidad técnica.</p>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed">Filtra por sector y especialidad técnica.</p>
                     </div>
                     <div class="mt-4">
                         <a href="#vacantes" class="btn-minimal btn-outline border-white/20 text-white w-full justify-center hover:bg-brand-accent hover:border-brand-accent hover:text-brand-black">Ir al Buscador <i class="fa-solid fa-arrow-right"></i></a>
@@ -1021,13 +1014,13 @@
                 </div>
                 
                 <!-- Caja 2 -->
-                <div class="bg-brand-black/40 border border-white/10 rounded-3xl p-8 hover:border-brand-accent transition-all duration-300 flex flex-col justify-between h-64 group">
+                <div class="bg-brand-black/40 border border-white/10 rounded-3xl p-8 hover:border-brand-accent transition-all duration-300 flex flex-col justify-between h-full group">
                     <div>
                         <div class="w-12 h-12 flex items-center justify-start mb-4">
                             <svg class="svg-icon text-brand-accent group-hover:text-white transition-colors duration-300" viewBox="0 0 48 48" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><g class="doc-page"><path d="M14 6 H30 L36 12 V42 H14 Z" /><polyline points="30,6 30,12 36,12" /></g><line class="doc-line-anim" x1="20" y1="20" x2="32" y2="20" /><line class="doc-line-anim" x1="20" y1="26" x2="28" y2="26" /><polyline class="doc-check-mark" points="20,34 24,38 32,30" fill="none" /></svg>
                         </div>
                         <h3 class="text-xl font-heading font-medium text-white mb-2">Registro Express</h3>
-                        <p class="text-gray-400 text-xs font-light leading-relaxed">Sube tu CV en 30 segundos. Sin formularios infinitos.</p>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed">Sube tu CV en 30 segundos. Sin formularios infinitos.</p>
                     </div>
                     <div class="mt-4">
                         <a href="#contacto-candidato" class="btn-minimal btn-outline border-white/20 text-white w-full justify-center hover:bg-brand-accent hover:border-brand-accent hover:text-brand-black">Cargar archivo <i class="fa-solid fa-arrow-right"></i></a>
@@ -1049,7 +1042,7 @@
         </div>
         
         <!-- Bloque 1: Para Empresas (B2B) -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-32" id="empresas">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start mb-32" id="empresas">
             <!-- Info (7 columnas) -->
             <div class="lg:col-span-7 space-y-8" data-aos="fade-right">
                 <div>
@@ -1064,7 +1057,7 @@
                             <div class="w-1.5 h-1.5 rounded-full bg-brand-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <h3 class="text-lg font-heading font-semibold mb-1 text-brand-black group-hover:text-brand-blue-700 transition-colors duration-300">TENEMOS Especialización</h3>
-                        <p class="text-brand-gray font-light leading-relaxed text-xs">No somos generalistas: entendemos la complejidad de los entornos industriales, desde operaciones, ingeniería y mantenimiento, hasta calidad, seguridad, supply chain, proyectos y desarrollo comercial técnico.</p>
+                        <p class="text-brand-black/80 font-normal leading-relaxed text-sm">No somos generalistas: entendemos la complejidad de los entornos industriales, desde operaciones, ingeniería y mantenimiento, hasta calidad, seguridad, supply chain, proyectos y desarrollo comercial técnico.</p>
                     </div>
                     
                     <!-- Item 2 -->
@@ -1073,7 +1066,7 @@
                             <div class="w-1.5 h-1.5 rounded-full bg-brand-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <h3 class="text-lg font-heading font-semibold mb-1 text-brand-black group-hover:text-brand-blue-700 transition-colors duration-300">MITIGAMOS el Riesgo</h3>
-                        <p class="text-brand-gray font-light leading-relaxed text-xs">Mitigamos el riesgo de contratación, aplicando una metodología de evaluación exhaustiva para asegurar la compatibilidad técnica y el fit cultural.</p>
+                        <p class="text-brand-black/80 font-normal leading-relaxed text-sm">Mitigamos el riesgo de contratación, aplicando una metodología de evaluación exhaustiva para asegurar la compatibilidad técnica y el fit cultural.</p>
                     </div>
                     
                     <!-- Item 3 -->
@@ -1082,7 +1075,7 @@
                             <div class="w-1.5 h-1.5 rounded-full bg-brand-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <h3 class="text-lg font-heading font-semibold mb-1 text-brand-black group-hover:text-brand-blue-700 transition-colors duration-300">GARANTÍA de 12 Meses*</h3>
-                        <p class="text-brand-gray font-light leading-relaxed text-xs">Ofrecemos esquemas de garantía de HASTA 12 Meses*: diseñados para reducir el riesgo de contratación y proteger la continuidad del proceso. <span class="text-[10px] block text-gray-400 mt-1">*Esquema puede variar según la posición.</span></p>
+                        <p class="text-brand-black/80 font-normal leading-relaxed text-sm">Ofrecemos esquemas de garantía de HASTA 12 Meses*: diseñados para reducir el riesgo de contratación y proteger la continuidad del proceso. <span class="text-[10px] block text-gray-400 mt-1">*Esquema puede variar según la posición.</span></p>
                     </div>
                     
                     <!-- Item 4 -->
@@ -1091,7 +1084,7 @@
                             <div class="w-1.5 h-1.5 rounded-full bg-brand-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <h3 class="text-lg font-heading font-semibold mb-1 text-brand-black group-hover:text-brand-blue-700 transition-colors duration-300">ACCEDEMOS a Perfiles Pasivos</h3>
-                        <p class="text-brand-gray font-light leading-relaxed text-xs">Accedemos a perfiles de alto valor que no participan de forma activa en portales de empleo tradicionales.</p>
+                        <p class="text-brand-black/80 font-normal leading-relaxed text-sm">Accedemos a perfiles de alto valor que no participan de forma activa en portales de empleo tradicionales.</p>
                     </div>
                 </div>
                 
@@ -1101,220 +1094,19 @@
             </div>
             
             <!-- Custom Flat Illustration B2B (5 columnas) -->
-            <div class="lg:col-span-5 flex items-center justify-center" data-aos="fade-left" data-aos-delay="200">
-                <div class="flat-illustration-container w-full max-w-[380px] mx-auto overflow-visible">
-                    <svg viewBox="0 0 400 360" fill="none" class="w-full h-auto overflow-visible">
-                        <defs>
-                            <linearGradient id="mount-grad-b2b" x1="0%" y1="0%" x2="0%" y2="100%">
-                                <stop offset="0%" stop-color="#CBD5E1" stop-opacity="0.5"/>
-                                <stop offset="100%" stop-color="#E7F0FF" stop-opacity="0.2"/>
-                            </linearGradient>
-                            <radialGradient id="target-glow" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" stop-color="#2C7BE5" stop-opacity="0.3"/>
-                                <stop offset="100%" stop-color="#2C7BE5" stop-opacity="0"/>
-                            </radialGradient>
-                        </defs>
-
-                        <!-- Background Clouds (Drifting) -->
-                        <g class="b2b-cloud-1">
-                            <path d="M 40 60 C 60 60, 70 50, 90 55 C 110 60, 120 75, 100 80 L 30 80 Z" fill="#F1F5F9" />
-                        </g>
-                        <g class="b2b-cloud-2">
-                            <path d="M 270 70 C 280 65, 295 65, 305 70 C 315 75, 335 70, 340 80 L 260 80 Z" fill="#F1F5F9" opacity="0.8" />
-                        </g>
-
-                        <!-- Background Mountains -->
-                        <polygon points="30,320 150,180 250,320" fill="url(#mount-grad-b2b)" />
-                        <polygon points="150,180 250,320 150,320" fill="#CBD5E1" opacity="0.5" />
-                        <polygon points="110,320 220,130 350,320" fill="url(#mount-grad-b2b)" opacity="0.8" />
-                        <polygon points="220,130 350,320 220,320" fill="#CBD5E1" opacity="0.4" />
-                        
-                        <!-- Base Shadow reflections (horizontal clean bars under platform) -->
-                        <rect x="180" y="325" width="160" height="8" rx="4" fill="#E2E8F0" />
-                        <rect x="130" y="335" width="220" height="10" rx="5" fill="#E2E8F0" opacity="0.6" />
-                        <rect x="220" y="347" width="90" height="6" rx="3" fill="#E2E8F0" />
-
-                        <!-- Birds (Floating) -->
-                        <g class="b2b-bird-1">
-                            <path d="M 50 100 L 55 106 L 62 101" stroke="#0F172A" stroke-width="2" stroke-linecap="round" fill="none" />
-                        </g>
-                        <g class="b2b-bird-2">
-                            <path d="M 310 110 L 317 116 L 326 111" stroke="#0F172A" stroke-width="2" stroke-linecap="round" fill="none" />
-                        </g>
-
-                        <!-- Platform / Floor -->
-                        <path d="M 20 320 L 380 320" stroke="#CBD5E1" stroke-width="2" stroke-linecap="round" />
-
-                        <!-- Talent Network & Connections -->
-                        <line x1="220" y1="110" x2="270" y2="150" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="3 3" />
-                        <line x1="270" y1="150" x2="310" y2="90" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="3 3" />
-                        <line x1="270" y1="150" x2="330" y2="180" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="3 3" />
-                        <line x1="270" y1="150" x2="240" y2="220" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="3 3" />
-
-                        <!-- Passive Candidate nodes (teal) -->
-                        <circle cx="220" cy="110" r="6" fill="#1BB3A4" />
-                        <circle cx="310" cy="90" r="5" fill="#1BB3A4" />
-                        <circle cx="330" cy="180" r="7" fill="#1BB3A4" />
-                        <circle cx="240" cy="220" r="6" fill="#1BB3A4" />
-
-                        <!-- Highlighted Target Node (Perfect Match) -->
-                        <g class="b2b-target-node">
-                            <circle cx="270" cy="150" r="36" fill="url(#target-glow)" />
-                            <circle cx="270" cy="150" r="16" fill="#2C7BE5" stroke="#FFFFFF" stroke-width="3" />
-                            <circle cx="270" cy="150" r="24" stroke="#2C7BE5" stroke-width="1.5" class="b2b-node-pulse" fill="none" opacity="0.6" />
-                            <!-- Small candidate avatar symbol -->
-                            <path d="M 266 153 C 266 150.5 268 149 270 149 C 272 149 274 150.5 274 153 M 272 146 C 272 145 271 144 270 144 C 269 144 268 145 268 146 C 268 147 269 148 270 148 C 271 148 272 147 272 146 Z" stroke="#FFFFFF" stroke-width="1.2" fill="none" />
-                        </g>
-
-                        <!-- Character B2B (Matching style exactly) -->
-                        <g transform="translate(110, 150)">
-                            <!-- Left Leg (Straight) -->
-                            <path d="M 32 75 L 32 110" stroke="#0E2A47" stroke-width="10" stroke-linecap="round" />
-                            <rect x="27" y="105" width="10" height="6" rx="1.5" fill="#94A3B8" />
-                            <path d="M 32 111 L 32 116" stroke="#F9DEC9" stroke-width="6" />
-                            <path d="M 22 122 L 34 122 L 35 116 L 24 116 Z" fill="#FFC72C" />
-                            <rect x="21" y="121" width="14" height="2" rx="1" fill="#FFFFFF" />
-
-                            <!-- Right Leg (Bent) -->
-                            <path d="M 46 75 L 56 110" stroke="#0E2A47" stroke-width="10" stroke-linecap="round" />
-                            <rect x="51" y="105" width="10" height="6" rx="1.5" fill="#94A3B8" />
-                            <path d="M 56 111 L 56 116" stroke="#F9DEC9" stroke-width="6" />
-                            <path d="M 46 122 L 58 122 L 59 116 L 48 116 Z" fill="#FFC72C" />
-                            <rect x="45" y="121" width="14" height="2" rx="1" fill="#FFFFFF" />
-
-                            <!-- Torso (White Shirt) -->
-                            <path d="M 25 35 C 25 35 25 75 25 75 L 53 75 C 53 75 51 35 51 35 Z" fill="#FFFFFF" stroke="#0E2A47" stroke-width="2" />
-                            <path d="M 32 35 L 38 42 L 44 35" fill="none" stroke="#0E2A47" stroke-width="2" />
-                            <path d="M 38 42 L 36 68 L 38 72 L 40 68 Z" fill="#FFC72C" />
-                            <rect x="25" y="74" width="28" height="5" fill="#1E293B" />
-                            <rect x="36" y="73" width="6" height="7" rx="1" fill="#94A3B8" />
-
-                            <!-- Head & Neck -->
-                            <rect x="35" y="27" width="6" height="10" fill="#F9DEC9" />
-                            <circle cx="28" cy="18" r="3" fill="#F9DEC9" />
-                            <circle cx="48" cy="18" r="3" fill="#F9DEC9" />
-                            <circle cx="38" cy="18" r="10" fill="#F9DEC9" />
-                            <path d="M 28 15 C 28 15 35 5 46 12 C 48 14 48 20 48 20 C 48 20 38 18 28 15" fill="#0F172A" />
-                            <circle cx="34" cy="17" r="1.2" fill="#0F172A" />
-                            <circle cx="42" cy="17" r="1.2" fill="#0F172A" />
-                            <path d="M 35 21 Q 38 23 41 21" stroke="#0F172A" stroke-width="1.2" stroke-linecap="round" fill="none" />
-
-                            <!-- Arms -->
-                            <!-- Right Arm (Hand on hip) -->
-                            <path d="M 26 36 Q 14 48 24 58" stroke="#FFFFFF" stroke-width="7.5" stroke-linecap="round" fill="none" />
-                            <path d="M 26 36 Q 14 48 24 58" stroke="#0E2A47" stroke-width="2" stroke-linecap="round" fill="none" />
-                            
-                            <!-- Left Arm (Holding magnifying glass) -->
-                            <path d="M 50 36 L 80 44" stroke="#FFFFFF" stroke-width="7.5" stroke-linecap="round" fill="none" />
-                            <path d="M 50 36 L 80 44" stroke="#0E2A47" stroke-width="2" stroke-linecap="round" fill="none" />
-                            <circle cx="81" cy="44" r="4" fill="#F9DEC9" />
-                        </g>
-
-                        <!-- Magnifying glass (Animated scan overlay) -->
-                        <g class="b2b-glass">
-                            <line x1="192" y1="194" x2="238" y2="152" stroke="#0E2A47" stroke-width="5" stroke-linecap="round" /> <!-- Handle -->
-                            <circle cx="250" cy="142" r="26" stroke="#0E2A47" stroke-width="4.5" fill="none" /> <!-- Frame -->
-                            <circle cx="250" cy="142" r="24" fill="#2C7BE5" fill-opacity="0.1" /> <!-- Glass tint -->
-                        </g>
-                    </svg>
+            <div class="lg:col-span-5 lg:sticky lg:top-32 flex items-center justify-center" data-aos="fade-left" data-aos-delay="200">
+                <div class="flat-illustration-container w-full max-w-[500px] mx-auto overflow-visible">
+                    <img src="assets/img/01%20empresas.jpeg" alt="Para Empresas" class="rounded-3xl shadow-xl w-full max-w-[500px] mx-auto object-cover">
                 </div>
             </div>
         </div>
         
         <!-- Bloque 2: Para Candidatos (B2C) -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center" id="candidatos">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start" id="candidatos">
             <!-- Custom Flat Illustration B2C (5 columnas, orden alternado en desktop) -->
-            <div class="lg:col-span-5 order-2 lg:order-1 flex items-center justify-center" data-aos="fade-right" data-aos-delay="200">
-                <div class="flat-illustration-container w-full max-w-[380px] mx-auto overflow-visible">
-                    <svg viewBox="0 0 400 360" fill="none" class="w-full h-auto overflow-visible">
-                        <!-- Background clouds (very soft flat grey/blue) -->
-                        <g class="b2c-cloud-1">
-                            <path d="M 60 70 C 80 70, 90 60, 110 65 C 130 70, 140 85, 120 90 L 50 90 Z" fill="#F1F5F9" />
-                        </g>
-                        <g class="b2c-cloud-2">
-                            <path d="M 280 90 C 290 85, 305 85, 315 90 C 325 95, 345 90, 350 100 L 270 100 Z" fill="#F1F5F9" />
-                        </g>
-
-                        <!-- Base Shadow reflections (horizontal clean bars under mountain) -->
-                        <rect x="180" y="325" width="160" height="8" rx="4" fill="#E2E8F0" />
-                        <rect x="130" y="335" width="220" height="10" rx="5" fill="#E2E8F0" opacity="0.6" />
-                        <rect x="220" y="347" width="90" height="6" rx="3" fill="#E2E8F0" />
-
-                        <!-- Mountain structure (Flat vector layout with sharp shadow plane) -->
-                        <polygon points="60,320 220,160 350,320" fill="#E2E8F0" />
-                        <polygon points="220,160 350,320 220,320" fill="#CBD5E1" /> <!-- sharp side shadow -->
-                        
-                        <!-- Floating birds V-shape -->
-                        <g class="b2c-bird-1">
-                            <path d="M 70 110 L 75 116 L 82 111" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-                        </g>
-                        <g class="b2c-bird-2">
-                            <path d="M 290 150 L 297 158 L 306 151" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-                        </g>
-
-                        <!-- Flagpole & Flag (Matching reference purple/violet) -->
-                        <g class="b2c-flag-group">
-                            <line x1="215" y1="210" x2="215" y2="50" stroke="#E2E8F0" stroke-width="4.5" stroke-linecap="round" />
-                            <path class="b2c-flag" d="M 215 50 Q 255 35 290 52 C 305 58 320 48 325 50 L 325 105 C 310 103 295 112 280 105 Q 245 90 215 105 Z" fill="#7F56D9" />
-                        </g>
-
-                        <!-- Character standing on the peak -->
-                        <g transform="translate(110, 105)">
-                            <!-- Left Leg (Standing straight) -->
-                            <path d="M 32 75 L 32 110" stroke="#0E2A47" stroke-width="10" stroke-linecap="round" />
-                            <!-- Left Cuff -->
-                            <rect x="27" y="105" width="10" height="6" rx="1.5" fill="#94A3B8" />
-                            <!-- Left Leg ankle extension -->
-                            <path d="M 32 111 L 32 116" stroke="#F9DEC9" stroke-width="6" />
-                            <!-- Left Shoe (Yellow with white sole) -->
-                            <path d="M 22 122 L 34 122 L 35 116 L 24 116 Z" fill="#FFC72C" />
-                            <rect x="21" y="121" width="14" height="2" rx="1" fill="#FFFFFF" />
-
-                            <!-- Right Leg (Bent on higher step) -->
-                            <path d="M 46 75 L 68 85 L 68 100" stroke="#0E2A47" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-                            <!-- Right Cuff -->
-                            <rect x="63" y="96" width="10" height="6" rx="1.5" fill="#94A3B8" transform="rotate(0)" />
-                            <!-- Right Leg ankle extension -->
-                            <path d="M 68 101 L 68 104" stroke="#F9DEC9" stroke-width="6" />
-                            <!-- Right Shoe (Yellow with white sole) -->
-                            <path d="M 58 110 L 70 110 L 71 104 L 60 104 Z" fill="#FFC72C" />
-                            <rect x="57" y="109" width="14" height="2" rx="1" fill="#FFFFFF" />
-
-                            <!-- Torso (White Shirt) -->
-                            <path d="M 25 35 C 25 35 25 75 25 75 L 53 75 C 53 75 51 35 51 35 Z" fill="#FFFFFF" stroke="#0E2A47" stroke-width="2" />
-                            <!-- Collar -->
-                            <path d="M 32 35 L 38 42 L 44 35" fill="none" stroke="#0E2A47" stroke-width="2" />
-                            <!-- Tie (Golden Yellow) -->
-                            <path d="M 38 42 L 36 68 L 38 72 L 40 68 Z" fill="#FFC72C" />
-                            <!-- Belt -->
-                            <rect x="25" y="74" width="28" height="5" fill="#1E293B" />
-                            <rect x="36" y="73" width="6" height="7" rx="1" fill="#94A3B8" /> <!-- Buckle -->
-
-                            <!-- Head & Neck -->
-                            <rect x="35" y="27" width="6" height="10" fill="#F9DEC9" />
-                            <!-- Ears -->
-                            <circle cx="28" cy="18" r="3" fill="#F9DEC9" />
-                            <circle cx="48" cy="18" r="3" fill="#F9DEC9" />
-                            <!-- Face -->
-                            <circle cx="38" cy="18" r="10" fill="#F9DEC9" />
-                            <!-- Hair (Quiff style swepped right) -->
-                            <path d="M 28 15 C 28 15 35 5 46 12 C 48 14 48 20 48 20 C 48 20 38 18 28 15" fill="#0F172A" />
-                            <!-- Facial Details -->
-                            <circle cx="34" cy="17" r="1.2" fill="#0F172A" />
-                            <circle cx="42" cy="17" r="1.2" fill="#0F172A" />
-                            <path d="M 35 21 Q 38 23 41 21" stroke="#0F172A" stroke-width="1.2" stroke-linecap="round" fill="none" /> <!-- mouth -->
-
-                            <!-- Arms -->
-                            <!-- Right Arm (Hand on hip) -->
-                            <path d="M 26 36 Q 14 48 24 58" stroke="#FFFFFF" stroke-width="7.5" stroke-linecap="round" fill="none" />
-                            <path d="M 26 36 Q 14 48 24 58" stroke="#0E2A47" stroke-width="2" stroke-linecap="round" fill="none" />
-                            
-                            <!-- Left Arm (Holding flagpole) -->
-                            <path d="M 50 36 L 85 45" stroke="#FFFFFF" stroke-width="7.5" stroke-linecap="round" fill="none" />
-                            <path d="M 50 36 L 85 45" stroke="#0E2A47" stroke-width="2" stroke-linecap="round" fill="none" />
-                            <circle cx="86" cy="45" r="4" fill="#F9DEC9" /> <!-- Hand -->
-                        </g>
-                    </svg>
+            <div class="lg:col-span-5 order-2 lg:order-1 lg:sticky lg:top-32 flex items-center justify-center" data-aos="fade-right" data-aos-delay="200">
+                <div class="flat-illustration-container w-full max-w-[500px] mx-auto overflow-visible">
+                    <img src="assets/img/02%20andidatos.jpeg" alt="Para Candidatos" class="rounded-3xl shadow-xl w-full max-w-[500px] mx-auto object-cover">
                 </div>
             </div>
             
@@ -1332,7 +1124,7 @@
                             <div class="w-1.5 h-1.5 bg-brand-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <h3 class="text-lg font-heading font-semibold mb-1 text-brand-black group-hover:text-brand-blue-700 transition-colors duration-300">SELECCIONAMOS con Criterio</h3>
-                        <p class="text-brand-gray font-light leading-relaxed text-xs">Seleccionamos estratégicamente para tu perfil, procesos y posiciones que no siempre están disponibles en otros portales.</p>
+                        <p class="text-brand-black/80 font-normal leading-relaxed text-sm">Seleccionamos estratégicamente para tu perfil, procesos y posiciones que no siempre están disponibles en otros portales.</p>
                     </div>
                     
                     <!-- Item 2 -->
@@ -1341,7 +1133,7 @@
                             <div class="w-1.5 h-1.5 bg-brand-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <h3 class="text-lg font-heading font-semibold mb-1 text-brand-black group-hover:text-brand-blue-700 transition-colors duration-300">COMPRENDEMOS tu Lenguaje</h3>
-                        <p class="text-brand-gray font-light leading-relaxed text-xs">Comprendemos tu trayectoria y el lenguaje técnico de los sectores industriales.</p>
+                        <p class="text-brand-black/80 font-normal leading-relaxed text-sm">Comprendemos tu trayectoria y el lenguaje técnico de los sectores industriales.</p>
                     </div>
                     
                     <!-- Item 3 -->
@@ -1350,7 +1142,7 @@
                             <div class="w-1.5 h-1.5 bg-brand-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <h3 class="text-lg font-heading font-semibold mb-1 text-brand-black group-hover:text-brand-blue-700 transition-colors duration-300">PROTEGEMOS tu Confidencialidad</h3>
-                        <p class="text-brand-gray font-light leading-relaxed text-xs">Protegemos tu situación laboral actual con procesos discretos, confidenciales y una gestión ética de tu información profesional.</p>
+                        <p class="text-brand-black/80 font-normal leading-relaxed text-sm">Protegemos tu situación laboral actual con procesos discretos, confidenciales y una gestión ética de tu información profesional.</p>
                     </div>
                     
                     <!-- Item 4 -->
@@ -1359,7 +1151,7 @@
                             <div class="w-1.5 h-1.5 bg-brand-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
                         <h3 class="text-lg font-heading font-semibold mb-1 text-brand-black group-hover:text-brand-blue-700 transition-colors duration-300">ACOMPAÑAMOS tu Desarrollo</h3>
-                        <p class="text-brand-gray font-light leading-relaxed text-xs">Acompañamos con transparencia en cada etapa de tu proceso de crecimiento profesional.</p>
+                        <p class="text-brand-black/80 font-normal leading-relaxed text-sm">Acompañamos con transparencia en cada etapa de tu proceso de crecimiento profesional.</p>
                     </div>
                 </div>
                 
@@ -1501,7 +1293,7 @@
                     </div>
                     <div class="relative z-10">
                         <h3 class="text-xl font-heading font-medium mb-1">Energía</h3>
-                        <p class="text-brand-gray text-[11px] leading-relaxed font-light">Proyectos de generación, infraestructura eléctrica, transición energética y renovables.</p>
+                        <p class="text-brand-black/80 text-sm leading-relaxed font-normal">Proyectos de generación, infraestructura eléctrica, transición energética y renovables.</p>
                     </div>
                 </div>
 
@@ -1526,7 +1318,7 @@
                     </div>
                     <div>
                         <h3 class="text-xl font-heading font-medium mb-1">Automotriz</h3>
-                        <p class="text-brand-gray text-[11px] leading-relaxed font-light">Liderazgo especializado para manufactura avanzada, operaciones, calidad y supply chain.</p>
+                        <p class="text-brand-black/80 text-sm leading-relaxed font-normal">Liderazgo especializado para manufactura avanzada, operaciones, calidad y supply chain.</p>
                     </div>
                 </div>
 
@@ -1548,7 +1340,7 @@
                     </div>
                     <div>
                         <h3 class="text-xl font-heading font-medium mb-1 text-white">Manufactura Avanzada</h3>
-                        <p class="text-gray-400 text-[11px] leading-relaxed font-light">Perfiles estratégicos para producción compleja, automatización y eficiencia operativa.</p>
+                        <p class="text-gray-300 text-sm leading-relaxed font-normal">Perfiles estratégicos para producción compleja, automatización y eficiencia operativa.</p>
                     </div>
                 </div>
 
@@ -1562,7 +1354,7 @@
                     </div>
                     <div>
                         <h3 class="text-xl font-heading font-medium mb-1">Oil & Gas</h3>
-                        <p class="text-brand-gray text-[11px] leading-relaxed font-light">Talento especializado en gestión técnica, seguridad, operaciones y Upstream/Downstream.</p>
+                        <p class="text-brand-black/80 text-sm leading-relaxed font-normal">Talento especializado en gestión técnica, seguridad, operaciones y Upstream/Downstream.</p>
                     </div>
                 </div>
 
@@ -1578,7 +1370,7 @@
                     </div>
                     <div>
                         <h3 class="text-xl font-heading font-medium mb-1">Aeroespacial</h3>
-                        <p class="text-brand-gray text-[11px] leading-relaxed font-light">Perfiles para contextos regulados, ingeniería de precisión y estándares AS9100.</p>
+                        <p class="text-brand-black/80 text-sm leading-relaxed font-normal">Perfiles para contextos regulados, ingeniería de precisión y estándares AS9100.</p>
                     </div>
                 </div>
 
@@ -1603,7 +1395,7 @@
                     </div>
                     <div>
                         <h3 class="text-xl font-heading font-medium mb-1">Construcción e Infraestructura</h3>
-                        <p class="text-brand-gray text-[11px] leading-relaxed font-light">Planeación, supervisión, ejecución de proyectos, control operativo y desarrollo de infraestructura.</p>
+                        <p class="text-brand-black/80 text-sm leading-relaxed font-normal">Planeación, supervisión, ejecución de proyectos, control operativo y desarrollo de infraestructura.</p>
                     </div>
                 </div>
 
@@ -1619,7 +1411,7 @@
                     </div>
                     <div>
                         <h3 class="text-xl font-heading font-medium mb-1">Industria Pesada</h3>
-                        <p class="text-brand-gray text-[11px] leading-relaxed font-light">Ingeniería, mantenimiento, dirección de planta y continuidad productiva compleja.</p>
+                        <p class="text-brand-black/80 text-sm leading-relaxed font-normal">Ingeniería, mantenimiento, dirección de planta y continuidad productiva compleja.</p>
                     </div>
                 </div>
 
@@ -1638,7 +1430,7 @@
                     </div>
                     <div>
                         <h3 class="text-xl font-heading font-medium mb-1">Minería</h3>
-                        <p class="text-brand-gray text-[11px] leading-relaxed font-light">Operaciones mineras, mantenimiento, seguridad y supply chain en proyectos extractivos.</p>
+                        <p class="text-brand-black/80 text-sm leading-relaxed font-normal">Operaciones mineras, mantenimiento, seguridad y supply chain en proyectos extractivos.</p>
                     </div>
                 </div>
 
@@ -1662,7 +1454,7 @@
                     <h2 class="text-3xl md:text-h2 font-heading font-medium tracking-tight text-brand-black">
                         Cada vez más empresas se suman a DAMA.
                     </h2>
-                    <p class="text-xs text-brand-gray font-light mt-4 leading-relaxed">
+                    <p class="text-sm text-brand-gray font-light mt-4 leading-relaxed">
                         Conoce la experiencia de líderes y directivos en sectores industriales y técnicos que han transformado sus equipos con nosotros.
                     </p>
                 </div>
